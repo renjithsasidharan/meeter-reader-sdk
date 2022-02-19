@@ -361,21 +361,15 @@ class OCRModelExecutor(context: Context, private var useGPU: Boolean = false) : 
 
   companion object {
     public const val TAG = "TfLiteOCRDemo"
-    //private const val textDetectionModel = "text_detection.tflite"
-    //private const val textDetectionModel = "east_detection.tflite"
-    private const val textDetectionModel = "east_model_fp16.tflite"
-    //private const val textDetectionModel = "east_model_dr.tflite"
-    //private const val textRecognitionModel = "text_recognition.tflite"
-    private const val textRecognitionModel = "7seg_rec_float16.tflite"
+    private const val textDetectionModel = "reading_detectionV2.tflite"
+    private const val textRecognitionModel = "reading_ocrV3.tflite"
     private const val numberThreads = 4
-    private const val alphabets = "0123456789abcdefghijklmnopqrstuvwxyz"
+    private const val alphabets = "0123456789."
     private const val displayImageSize = 257
     private const val detectionImageHeight = 320
     private const val detectionImageWidth = 320
     private val detectionImageMeans =
       floatArrayOf(103.94.toFloat(), 116.78.toFloat(), 123.68.toFloat())
-//private val detectionImageMeans =
-//        floatArrayOf(127.5.toFloat(), 127.5.toFloat(), 127.5.toFloat())
     private val detectionImageStds = floatArrayOf(1.toFloat(), 1.toFloat(), 1.toFloat())
     private val detectionOutputNumRows = 80
     private val detectionOutputNumCols = 80
