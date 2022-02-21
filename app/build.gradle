@@ -21,9 +21,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 32
-    buildToolsVersion "29.0.2"
     defaultConfig {
-        //applicationId "org.tensorflow.lite.meeterreader.ocr"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
