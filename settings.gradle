@@ -1,2 +1,2 @@
-rootProject.name = 'TFLite Reinforcement Learning Demo App'
+rootProject.name = 'TFLite Meeter Reader SDK'
 include ':app'
