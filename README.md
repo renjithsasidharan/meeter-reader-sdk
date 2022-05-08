@@ -9,6 +9,7 @@ Tensorflow lite android SDK for meeter reader. There are 3 machine learning mode
 
 ###### Meeter Display Detection
 This model locates the position of meeter display. A pre-trained Mobilenet V2 object detection model is fine tuned on meeter images to detect bounding boxes around meeter display.
+
 ![Meeter display detection](images/meeter-display-prediction.jpeg)
 
 ###### Meeter Reading Detection
