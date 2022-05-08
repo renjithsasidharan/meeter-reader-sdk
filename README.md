@@ -14,10 +14,12 @@ This model locates the position of meeter display. A pre-trained Mobilenet V2 ob
 
 ###### Meeter Reading Detection
 This model detects text on meeter images. A text can be meeter reading, or other any other texts in meeter. A pre-trained EAST text detection model is  fine-tuned on custom meeter images.
+
 ![Meeter reading detection](images/meeter-reading-detection-prediction.jpeg)
 
 ###### Meeter Reading OCR
 This model extracts the text from meeter text box detected by Meeter display and Meeter Reading detection model. A custom Keras ocr CNN model is trained on custom dataset for text extraction.
+
 ![Meeter OCR](images/meeter-ocr-prediction.jpg)
 
 #### How does the it work?
