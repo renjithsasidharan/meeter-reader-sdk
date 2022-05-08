@@ -4,8 +4,26 @@ Tensorflow lite android SDK for meeter reader. There are 3 machine learning mode
 | Model      | Description |
 | ----------- | ----------- |
 | app/src/main/assets/display_detection.tflite      | Model for meeter display detection       |
-| app/src/main/assets/reading_detectionV2.tflite   | Model for meeter reading detection        |
+| app/src/main/assets/reading_detectionV2.tflite   | Model for meeter text detection        |
 | app/src/main/assets/reading_ocrV3.tflite   | Model for meeter reading OCR        |
+
+###### Meeter Display Detection
+This model locates the position of meeter display. A pre-trained Mobilenet V2 object detection model is fine tuned on meeter images to detect bounding boxes around meeter display.
+![Meeter display detection](images/meeter-display-prediction.jpeg)
+
+###### Meeter Reading Detection
+This model detects text on meeter images. A text can be meeter reading, or other any other texts in meeter. A pre-trained EAST text detection model is  fine-tuned on custom meeter images.
+![Meeter reading detection](images/meeter-reading-detection-prediction.jpeg)
+
+###### Meeter Reading OCR
+This model extracts the text from meeter text box detected by Meeter display and Meeter Reading detection model. A custom Keras ocr CNN model is trained on custom dataset for text extraction.
+![Meeter OCR](images/meeter-ocr-prediction.jpg)
+
+#### How does the it work?
+1.  Get bounding box of meeter display from Meeter Display Detection model. We pick the bounding box with maximum confidence value.
+2.  Get locations of texts bounding boxes in Meeter Reading Detection model
+3.  Pick the text box with maximum intersection over union (IOU) value with meeter display (box from Meeter Display Detection).
+4.  Send that text box to Meeter OCR model for reading extraction.
 
 ## Getting Started
 This Guide will walk you through the steps needed to start using meeter reader SDK in your app, including running inference on your first image.
