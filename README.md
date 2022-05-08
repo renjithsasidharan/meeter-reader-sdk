@@ -10,7 +10,7 @@ Tensorflow lite android SDK for meeter reader. There are 3 machine learning mode
 ## Getting Started
 This Guide will walk you through the steps needed to start using meeter reader SDK in your app, including running inference on your first image.
 
-==You can either download the AAR file here [meeter_reader_sdk-v1-release.aar](https://github.com/renjithsasidharan/meeter-reader-sdk/blob/main/meeter_reader_sdk-v1-release.aar) or build from source as described below.==
+>You can either download the AAR file here [meeter_reader_sdk-v1-release.aar](https://github.com/renjithsasidharan/meeter-reader-sdk/blob/main/meeter_reader_sdk-v1-release.aar) or build from source as described below.
 
 ### Building the library
 Open a terminal and run:
