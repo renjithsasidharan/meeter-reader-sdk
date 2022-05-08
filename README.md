@@ -1,6 +1,11 @@
 # Meeter reader android SDK
 ---
-Tensorflow lite android SDK for meeter reader
+Tensorflow lite android SDK for meeter reader. There are 3 machine learning model used here.
+| Model      | Description |
+| ----------- | ----------- |
+| app/src/main/assets/display_detection.tflite      | Model for meeter display detection       |
+| app/src/main/assets/reading_detectionV2.tflite   | Model for meeter reading detection        |
+| app/src/main/assets/reading_ocrV3.tflite   | Model for meeter reading OCR        |
 
 ## Getting Started
 This Guide will walk you through the steps needed to start using meeter reader SDK in your app, including running inference on your first image.
